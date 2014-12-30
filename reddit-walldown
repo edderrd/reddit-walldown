@@ -6,9 +6,13 @@ require_once "vendor/autoload.php";
 use App\CleanupCommand;
 use App\ConfigManager;
 use App\RecentCommand;
+use App\UpdateCommand;
 use Symfony\Component\Console\Application;
 
 $app = new Application('reddit-walldown', '@package_version@');
+
 $app->add(new RecentCommand(new ConfigManager()));
 $app->add(new CleanupCommand(new ConfigManager()));
+$app->add(new UpdateCommand);
+
 $app->run();
