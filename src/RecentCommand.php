@@ -26,7 +26,7 @@ class RecentCommand extends Command
     public function configure()
     {
         $this->setName("recent")
-            ->setDescription("Download recent items from reddit.com/r/earthporn");
+            ->setDescription("Download recent items from reddit.com/r/earthporn+cityporn");
         ;
     }
 
